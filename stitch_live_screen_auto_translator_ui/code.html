@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-container": "#3131c0", "on-surface-variant": "#b9cacb", "on-error": "#690005", "secondary": "#c0c1ff", "tertiary-container": "#67f4b7", "surface-container-high": "#262a35", "primary-container": "#00f2fe", "on-primary-container": "#006a70", "on-surface": "#dfe2f1", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#0a0e18", "inverse-primary": "#00696f", "secondary-fixed-dim": "#c0c1ff", "error": "#ffb4ab", "surface-variant": "#313540", "on-primary-fixed": "#002022", "on-tertiary-container": "#006e4b", "on-secondary-fixed": "#07006c", "on-secondary-container": "#b0b2ff", "surface-dim": "#0f131d", "background": "#0f131d", "surface-bright": "#353944", "surface": "#0f131d", "on-error-container": "#ffdad6", "tertiary-fixed-dim": "#4edea3", "surface-tint": "#00dce6", "surface-container-highest": "#313540", "error-container": "#93000a", "on-secondary": "#1000a9", "primary": "#e0fdff", "outline": "#849495", "inverse-on-surface": "#2c303b", "tertiary-fixed": "#6ffbbe", "inverse-surface": "#dfe2f1", "primary-fixed-dim": "#00dce6", "on-tertiary-fixed-variant": "#005236", "on-primary": "#00373a", "secondary-fixed": "#e1e0ff", "primary-fixed": "#6ff6ff", "outline-variant": "#3a494b", "tertiary": "#e1ffec", "on-tertiary": "#003824", "surface-container-low": "#171b26", "surface-container": "#1c1f2a", "on-secondary-fixed-variant": "#2f2ebe", "on-background": "#dfe2f1", "on-primary-fixed-variant": "#004f53" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-md": ["Inter"], "title-lg": ["Inter"], "body-lg": ["Inter"], "label-sm": ["JetBrains Mono"], "body-md": ["Inter"], "label-lg": ["JetBrains Mono"], "headline-lg": ["Inter"], "title-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "label-md": ["JetBrains Mono"] }, "fontSize": { "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.4)]"><div class="h-28 px-margin flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Live Screen Auto-Translator Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V5fpEFyvDn668P5pu5cI5UXFb6wSqZhPUsaP36Q2J7bRAIv3DC89hXhFxk0-qe0f42hvDGat5XP0i_XLE7ht16zJBx1v_LQLZuzqvKUnLK7mtZfhrwax0X-g8SfjAvp3k2kfW6ZCFW21oEqrfzNDjmvPl7Geugxm7HUH5OzzjB9sHC5vJZIWvN0TSmuCtnm13IH-MfYzcTY2JilNje-WAfhBwC0f-Ps4ayWUoI-4QVyN8WDt3FSruKW9I"/><div class="flex flex-col"><span class="font-title-md text-title-md text-primary tracking-tight">ScreenTranslate AI</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Dashboard</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Diagnostics Status" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[20px]">memory</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between px-space-sm py-1 rounded-full bg-surface-container-lowest/80"><div class="flex items-center gap-space-sm"><div class="relative flex h-2.5 w-2.5 items-center justify-center"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-fixed-dim"></span></div><span class="font-label-sm text-label-sm text-tertiary-fixed tracking-wide uppercase">LIVE SERVICE: ACTIVE</span><span class="font-label-sm text-label-sm text-outline">|</span><span class="font-label-sm text-label-sm text-on-surface-variant">LATENCY: 142MS</span></div><button class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest transition-colors"><span class="font-label-sm text-label-sm text-primary">DAEMON</span><span class="material-symbols-outlined text-primary-container text-[14px]">toggle_on</span></button></div></div></header><main class="flex flex-col relative w-full px-margin pt-28 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full gap-space-md text-on-surface">
+<!-- Dynamic Service Status Hero Strip -->
+<div class="relative overflow-hidden rounded-[16px] bg-surface-container-high p-space-md shadow-xl">
+<div class="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-primary-container/10 blur-2xl pointer-events-none"></div>
+<div class="relative flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="relative flex h-3 w-3 items-center justify-center">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-fixed-dim"></span>
+</div>
+<span class="font-label-md text-label-md text-tertiary-fixed font-semibold tracking-wider uppercase">SERVICE ACTIVE • DAEMON RUNNING</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-container text-on-primary-fixed font-label-md text-label-md font-semibold shadow-lg hover:opacity-95 transition-all active:scale-95" id="master-toggle">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span>
+<span id="master-toggle-text">PAUSE SERVICE</span>
+</button>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary-container text-[14px]">auto_awesome</span>
+<span class="text-on-surface font-medium">Gemini 1.5 Flash</span>
+<span class="text-outline">|</span>
+<span class="text-tertiary-fixed-dim">Low-Lat Engine</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[13px] text-primary-container">speed</span>
+<span>60 FPS</span>
+</span>
+<span class="flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[13px] text-tertiary-fixed-dim">bolt</span>
+<span>128ms avg</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- API Engine Configuration Card -->
+<div class="flex flex-col gap-space-md rounded-[16px] bg-surface-container p-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-container/15 text-primary-container">
+<span class="material-symbols-outlined text-[22px]">key</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Gemini API Engine Setup</span>
+<span class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary-fixed-dim font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]">verified_user</span>
+              Verified
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Real-time multimodal neural translation core</span>
+</div>
+</div>
+</div>
+<!-- Masked API Key Input Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Active Inference Key</label>
+<div class="relative flex items-center rounded-xl bg-surface-container-lowest px-3 py-2.5">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2">lock</span>
+<input class="w-full bg-transparent font-label-md text-label-md text-primary tracking-widest focus:outline-none" id="api-key-input" readonly="" type="password" value="••••••••••••••••••••AIzaSy893KqL"/>
+<div class="flex items-center gap-1">
+<button aria-label="Toggle Key Visibility" class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary transition-colors" id="toggle-key-btn">
+<span class="material-symbols-outlined text-[18px]" id="eye-icon">visibility</span>
+</button>
+<button aria-label="Copy Key" class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary transition-colors" id="copy-key-btn">
+<span class="material-symbols-outlined text-[18px]" id="copy-icon">content_copy</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Quota: 1.2M / 2.0M tokens</span>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-primary-container hover:underline" id="ping-btn">
+<span class="material-symbols-outlined text-[13px]">swap_calls</span>
+<span id="ping-status">Test Connection (200 OK • 84ms)</span>
+</button>
+</div>
+</div>
+<!-- Language Selector Bar -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Language Pair Route</label>
+<div class="flex items-center justify-between rounded-xl bg-surface-container-lowest p-2.5">
+<div class="flex flex-1 items-center gap-2">
+<span class="flex h-7 w-7 items-center justify-center rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">EN</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Source</span>
+<span class="font-title-md text-title-md truncate">English (US)</span>
+</div>
+</div>
+<button aria-label="Swap Languages" class="flex h-9 w-9 items-center justify-center rounded-full bg-surface-container-high text-primary-container shadow hover:bg-surface-container-highest transition-all active:rotate-180">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+</button>
+<div class="flex flex-1 items-center justify-end gap-2 text-right">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Target</span>
+<span class="font-title-md text-title-md text-primary-container truncate">Japanese (日本語)</span>
+</div>
+<span class="flex h-7 w-7 items-center justify-center rounded-lg bg-primary-container/20 text-primary-container font-label-sm text-label-sm font-semibold">JA</span>
+</div>
+</div>
+<!-- Quick Switch Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 pt-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Quick:</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface hover:text-primary font-label-sm text-label-sm whitespace-nowrap active:scale-95">Spanish (ES)</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface hover:text-primary font-label-sm text-label-sm whitespace-nowrap active:scale-95">Korean (한국어)</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface hover:text-primary font-label-sm text-label-sm whitespace-nowrap active:scale-95">German (DE)</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface hover:text-primary font-label-sm text-label-sm whitespace-nowrap active:scale-95">French (FR)</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface hover:text-primary font-label-sm text-label-sm whitespace-nowrap active:scale-95">Chinese (Simp)</button>
+</div>
+</div>
+<!-- Engine Mode Toggle Segment -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Inference Pipeline Mode</label>
+<div class="grid grid-cols-2 gap-2 rounded-xl bg-surface-container-lowest p-1">
+<button class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary-container">bolt</span>
+<span>Fast Real-time (Low Latency)</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>Context Deep Scan</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Primary Feature Toggle Section -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Active Capture Pipelines</span>
+<span class="font-label-sm text-label-sm text-primary-container">2 of 3 Active</span>
+</div>
+<!-- Feature Card A: Screen Chat Reader -->
+<div class="flex flex-col gap-space-sm rounded-[16px] bg-surface-container p-space-md shadow-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-container/15 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">chat_bubble_outline</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Screen Chat Reader</span>
+<span class="h-2 w-2 rounded-full bg-tertiary-fixed-dim"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Floating bubble overlays real-time translations onto in-app chats (WhatsApp, Discord, Telegram).</span>
+</div>
+</div>
+<button aria-checked="true" class="toggle-btn relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-primary-container transition-colors duration-200" role="switch">
+<span class="translate-x-5 inline-block h-5 w-5 transform rounded-full bg-on-primary-fixed shadow-md transition duration-200 mt-1 ml-1"></span>
+</button>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-on-surface-variant">Trigger: Continuous Auto</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-on-surface-variant">Box Opacity: 85%</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-primary-container">Filter: PII Shield On</span>
+</div>
+</div>
+<!-- Feature Card B: Game OCR Screen Capture -->
+<div class="flex flex-col gap-space-sm rounded-[16px] bg-surface-container p-space-md shadow-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-container/15 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">sports_esports</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Game OCR Screen Capture</span>
+<span class="h-2 w-2 rounded-full bg-tertiary-fixed-dim"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">HUD translation layer bounding boxes over in-game dialogs, quest logs, and Japanese visual novels.</span>
+</div>
+</div>
+<button aria-checked="true" class="toggle-btn relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-primary-container transition-colors duration-200" role="switch">
+<span class="translate-x-5 inline-block h-5 w-5 transform rounded-full bg-on-primary-fixed shadow-md transition duration-200 mt-1 ml-1"></span>
+</button>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-on-surface-variant">Region: Full Display</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-on-surface-variant">Capture: 30 FPS</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-tertiary-fixed-dim">Manga Vertical OCR</span>
+</div>
+</div>
+<!-- Feature Card C: Live Audio Translator -->
+<div class="flex flex-col gap-space-sm rounded-[16px] bg-surface-container p-space-md shadow-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">graphic_eq</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Live Audio Translator</span>
+<span class="h-2 w-2 rounded-full bg-outline"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Captures media audio stream &amp; system sounds with instant floating subtitle transcriptions.</span>
+</div>
+</div>
+<button aria-checked="false" class="toggle-btn relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-surface-variant transition-colors duration-200" role="switch">
+<span class="translate-x-0 inline-block h-5 w-5 transform rounded-full bg-outline shadow-md transition duration-200 mt-1 ml-1"></span>
+</button>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-on-surface-variant">Input: Media Internal</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-on-surface-variant">Ducking: Inactive</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-outline">Standby</span>
+</div>
+</div>
+</div>
+<!-- Android System Permissions Checklist Card -->
+<div class="flex flex-col gap-space-md rounded-[16px] bg-surface-container p-space-md shadow-md">
+<div class="flex items-start gap-space-sm">
+<div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-secondary-container/30 text-secondary">
+<span class="material-symbols-outlined text-[20px]">admin_panel_settings</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Android System Permissions</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Background translation daemon requires overlay and screen capture pipelines.</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Permission Row 1 -->
+<div class="flex items-center justify-between gap-space-sm rounded-xl bg-surface-container-lowest p-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]">picture_in_picture</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold truncate">System Alert Window</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Draw Over Other Apps</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary-fixed-dim font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[12px]">check</span>
+            GRANTED
+          </span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">
+            Settings
+          </button>
+</div>
+</div>
+<!-- Permission Row 2 -->
+<div class="flex items-center justify-between gap-space-sm rounded-xl bg-surface-container-lowest p-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]">accessibility_new</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold truncate">Accessibility Service</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Text Node Hierarchy Reader</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary-fixed-dim font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[12px]">check</span>
+            GRANTED
+          </span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">
+            Config
+          </button>
+</div>
+</div>
+<!-- Permission Row 3: Requires Attention -->
+<div class="flex items-center justify-between gap-space-sm rounded-xl bg-surface-container-lowest p-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary-container text-[20px]">screen_share</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold truncate">Screen Capture</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">MediaProjection Video Frame Stream</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-primary-container text-on-primary-fixed font-label-sm text-label-sm font-semibold hover:opacity-95 shadow active:scale-95 transition-all" id="grant-btn">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Grant Permission</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Key Visibility Toggle
+  const keyInput = document.getElementById('api-key-input');
+  const toggleKeyBtn = document.getElementById('toggle-key-btn');
+  const eyeIcon = document.getElementById('eye-icon');
+  let isKeyVisible = false;
+
+  toggleKeyBtn?.addEventListener('click', () => {
+    isKeyVisible = !isKeyVisible;
+    if (isKeyVisible) {
+      keyInput.type = 'text';
+      keyInput.value = 'AIzaSy893KqL_xZ028fJb76XNop190Q';
+      eyeIcon.textContent = 'visibility_off';
+    } else {
+      keyInput.type = 'password';
+      keyInput.value = '••••••••••••••••••••AIzaSy893KqL';
+      eyeIcon.textContent = 'visibility';
+    }
+  });
+
+  // Copy Key Feedback
+  const copyBtn = document.getElementById('copy-key-btn');
+  const copyIcon = document.getElementById('copy-icon');
+  copyBtn?.addEventListener('click', () => {
+    copyIcon.textContent = 'done';
+    setTimeout(() => {
+      copyIcon.textContent = 'content_copy';
+    }, 1500);
+  });
+
+  // Ping Connection Simulation
+  const pingBtn = document.getElementById('ping-btn');
+  const pingStatus = document.getElementById('ping-status');
+  pingBtn?.addEventListener('click', () => {
+    pingStatus.textContent = 'Testing connection...';
+    setTimeout(() => {
+      const ms = Math.floor(Math.random() * 30) + 65;
+      pingStatus.textContent = `200 OK • ${ms}ms`;
+    }, 400);
+  });
+
+  // Master Service Toggle
+  const masterToggle = document.getElementById('master-toggle');
+  const masterToggleText = document.getElementById('master-toggle-text');
+  let isRunning = true;
+  masterToggle?.addEventListener('click', () => {
+    isRunning = !isRunning;
+    if (isRunning) {
+      masterToggleText.textContent = 'PAUSE SERVICE';
+      masterToggle.classList.remove('bg-surface-container-high', 'text-on-surface');
+      masterToggle.classList.add('bg-primary-container', 'text-on-primary-fixed');
+    } else {
+      masterToggleText.textContent = 'RESUME SERVICE';
+      masterToggle.classList.remove('bg-primary-container', 'text-on-primary-fixed');
+      masterToggle.classList.add('bg-surface-container-high', 'text-on-surface');
+    }
+  });
+
+  // Individual Feature Toggle Switches
+  const toggles = document.querySelectorAll('.toggle-btn');
+  toggles.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isChecked = btn.getAttribute('aria-checked') === 'true';
+      const thumb = btn.querySelector('span');
+      if (isChecked) {
+        btn.setAttribute('aria-checked', 'false');
+        btn.classList.remove('bg-primary-container');
+        btn.classList.add('bg-surface-variant');
+        thumb?.classList.remove('translate-x-5', 'bg-on-primary-fixed');
+        thumb?.classList.add('translate-x-0', 'bg-outline');
+      } else {
+        btn.setAttribute('aria-checked', 'true');
+        btn.classList.remove('bg-surface-variant');
+        btn.classList.add('bg-primary-container');
+        thumb?.classList.remove('translate-x-0', 'bg-outline');
+        thumb?.classList.add('translate-x-5', 'bg-on-primary-fixed');
+      }
+    });
+  });
+
+  // Screen Capture Permission Action
+  const grantBtn = document.getElementById('grant-btn');
+  grantBtn?.addEventListener('click', () => {
+    grantBtn.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span> Granted';
+    grantBtn.classList.remove('bg-primary-container', 'text-on-primary-fixed');
+    grantBtn.classList.add('bg-tertiary-container/20', 'text-tertiary-fixed-dim');
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] transition-colors text-primary-container font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm">Dashboard</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="overlay-settings" href="#"><span class="material-symbols-outlined text-[22px]">picture_in_picture_alt</span><span class="font-label-sm text-label-sm">Overlay</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="voice-translation" href="#"><span class="material-symbols-outlined text-[22px]">record_voice_over</span><span class="font-label-sm text-label-sm">Voice</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="api-logs" href="#"><span class="material-symbols-outlined text-[22px]">terminal</span><span class="font-label-sm text-label-sm">API Logs</span></a></div></nav></body></html>
